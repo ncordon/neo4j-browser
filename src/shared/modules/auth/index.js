@@ -265,6 +265,6 @@ export const authRequestForToken = (selectedSSOProvider, code) => {
   requestBody = requestBody.join('&')
 
   authLog(`Request for token in PKCE flow, idp_id: ${selectedSSOProvider.id}`)
-  const requestUrl = `${selectedSSOProvider.token_endpoint}?`
+  const requestUrl = `${selectedSSOProvider.token_endpoint}`
   return window.fetch(requestUrl, { ...requestOptions, body: requestBody })
 }
